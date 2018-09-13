@@ -1,3 +1,25 @@
-<p>
-  products-list works!
-</p>
+
+<div class="card mt-3">
+  <div class="card-header text-white bg-info">
+   <h5>Liste des produits </h5>
+  </div>
+  <div class="card-body">
+   <table class="table table-bordered table-striped">
+     <thead>
+       <tr>
+         <th>Title</th>
+         <th>Unit Price</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor="let p of data" >
+          <td scope="row"> <a href=""> {{p.name}} </a></td>
+         <td> {{p.unitPrice | currency:"EUR":"symbol"}} </td>
+
+       </tr>
+
+     </tbody>
+   </table>
+  </div>
+
+</div>
